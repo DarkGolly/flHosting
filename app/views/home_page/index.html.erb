@@ -1,0 +1,9 @@
+<form method="post" enctype="multipart/form-data">
+  <div style="margin-left: 15px; margin-top: 15px">
+    <label for="file">Choose file to upload</label>
+    <%= form_with url: "/uploads", multipart: true do |form| %>
+      <%= form.file_field :picture %>
+      <%= form.submit 'upload' %>
+    <% end %>
+  </div>
+</form>
